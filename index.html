@@ -1,15 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Babilônia - O Berço da Civilização</title>
+    <link href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css" rel="stylesheet">
     <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="landing.css">
 </head>
 <body>
+   
     <header>
-        <nav>
-        
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">BABILÔNIA</a>
+                <div class="nav-links">
+                    <a href="#historia">História</a>
+                    <a href="#maravilhas">Maravilhas</a>
+                    <a href="#galeria">Galeria</a>
+                    <a href="#contato">Contato</a>
+                </div>
+            </nav>
+        </div>
     </header>
+
+  
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubra os Segredos da Antiga Babilônia</h1>
+            <p>Explore a civilização que deu ao mundo a escrita cuneiforme, o Código de Hamurabi e as lendárias Jardins Suspensos</p>
+            <a href="#historia" class="btn">Explorar História</a>
+        </div>
+    </section>
+
+    
+    <section class="features" id="historia">
+        <div class="container">
+            <div class="section-title">
+                <h2>A Glória da Babilônia</h2>
+                <p>Conheça os aspectos mais marcantes desta civilização milenar</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-feather="book"></i>
+                    </div>
+                    <h3>Código de Hamurabi</h3>
+                    <p>O primeiro conjunto de leis escritas conhecido, estabelecido pelo rei Hamurabi por volta de 1750 a.C., com 282 artigos esculpidos em um monumento de diorito.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-feather="layers"></i>
+                    </div>
+                    <h3>Jardins Suspensos</h3>
+                    <p>Considerada uma das Sete Maravilhas do Mundo Antigo, os jardins eram uma impressionante estrutura arquitetônica com terraços elevados e exuberante vegetação.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-feather="compass"></i>
+                    </div>
+                    <h3>Porta de Ishtar</h3>
+                    <p>Monumental entrada para a cidade, adornada com tijolos vidrados azuis e relevos de dragões e touros, símbolos dos deuses Marduk e Adad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeria Babilônica</h2>
+                <p>Imagens que contam a história desta grande civilização</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="fotos/codigohamurabi.png" alt="Código de Hamurabi">
+                    <div class="gallery-caption">Código de Hamurabi - Museu do Louvre</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="fotos/arquitaturajardinssuspensos.jpg" alt="Representação dos Jardins Suspensos">
+                    <div class="gallery-caption">Representação artística dos Jardins Suspensos</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="fotos/portaIshtar.jpeg" alt="Porta de Ishtar">
+                    <div class="gallery-caption">Porta de Ishtar reconstruída - Museu de Berlim</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="fotos/leaoBabilonia.jpg" alt="Leão da Babilônia">
+                    <div class="gallery-caption">O Leão da Babilônia - Símbolo de poder</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="fotos/leaoBabilonia.jpg" alt="Mapa-múndi babilônico">
+                    <div class="gallery-caption">Mapa-múndi babilônico - Um dos primeiros mapas conhecidos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="maravilhas">
+        <div class="container">
+            <h2>Maravilhas da Babilônia</h2>
+            <p>Junte-se a nossa expedição virtual e descubra os mistérios desta civilização que moldou o mundo antigo. Receba nosso guia completo gratuitamente!</p>
+            <a href="#" class="btn">Receber Guia Gratuito</a>
+        </div>
+    </section>
+
+ 
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">BABILÔNIA</div>
+                
+                <div class="footer-links">
+                    <a href="historia">História</a>
+                    <a href="maravilhas">Maravilhas</a>
+                    <a href="galeria">Galeria</a>
+                    <a href="contato">Contato</a>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i data-feather="facebook"></i></a>
+                    <a href="#"><i data-feather="twitter"></i></a>
+                    <a href="#"><i data-feather="instagram"></i></a>
+                    <a href="#"><i data-feather="youtube"></i></a>
+                </div>
+                
+               
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace();
+        
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
